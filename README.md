@@ -2,15 +2,11 @@
 
 A learning tool designed for diverse students and learners who struggle with dense, traditional reading. This project uses LLMs and other generative AI tools to instantly reframe complex text into more digestible formats, like casual summaries, diagrams, audio narration, and mini-quizzes.
 
----
-
 ## Project Goals
 
 - Help users **retain and understand** complex information better
 - Support **visual, auditory, and interactive learning styles**
 - Create an ADHD-friendly tool with **low friction** and **instant feedback**
-
----
 
 ## ✨ Features (Planned and Implemented)
 
@@ -22,8 +18,6 @@ A learning tool designed for diverse students and learners who struggle with den
 | Adaptive Rephrasing Options    | Planning | Buttons like “Explain like I’m 5” or “Make a metaphor”                     |
 | Comprehension Mini-Quiz        | Planning | Generates 2–3 short questions based on the input text                      |
 | Chrome Extension (Stretch)     | Not yet  | Highlight text on any site → auto reframe with one click                   |
-
----
 
 ## Example Input & Output
 

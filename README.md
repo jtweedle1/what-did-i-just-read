@@ -1,4 +1,4 @@
-# What Did I Just Read? – AI-Powered Reader's Assistant
+# What Did I Just Read? – AI Reader's Learning Assistant
 
 A learning tool designed for diverse students and learners who struggle with dense, traditional reading. This project uses LLMs and other generative AI tools to instantly reframe complex text into more digestible formats, like casual summaries, diagrams, audio narration, and mini-quizzes.
 

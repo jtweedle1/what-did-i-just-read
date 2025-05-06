@@ -22,6 +22,7 @@ A learning tool designed for diverse students and learners who struggle with den
 ## Example Input & Output
 
 **Input:** "In classical conditioning, a neutral stimulus paired with an unconditioned stimulus becomes a conditioned stimulus that elicits a response."
+
 **Outputs:**
 - **Summary:** When you hear the ice cream truck song and start drooling - yep, that’s conditioning.
 - **Visual Map:** [Neutral Stimulus] + [UCS] → [CS] → [Response]

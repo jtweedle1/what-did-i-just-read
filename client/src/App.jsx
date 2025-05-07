@@ -1,20 +1,18 @@
 // File description: Top-level UI container
 
-import { useState } from 'react'
 import './App.css'
-import { BrowserRouter } from "react-router";
 import Dashboard from './pages/Dashboard';
+import Home from "./pages/Home"
+import { Routes, Route } from "react-router";
 
 function App() {
   return (
-    <div>
-      <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
-        <Route path="/dashboard" element={<Dashboard />} />
-        {/* <Route path="/login" element={<Login />} />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      {/* <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<Profile />} /> */}
-      </Routes>
-    </div>
+    </Routes>
   )
 }
 

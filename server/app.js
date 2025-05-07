@@ -12,7 +12,6 @@ app.use(cors()); // Enable CORS globally
 app.use(express.json()); // Middleware to parse incoming JSON in request bodies
 
 // Routes
-const diagramRoutes = require('./routes/diagram');
 app.use('/api/summarize', summarizeRoutes);
 // app.use('/api/diagram', diagramRoutes);
 

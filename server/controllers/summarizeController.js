@@ -21,7 +21,7 @@ exports.summarizeText = async (req, res) => {
       temperature: 0.7, // Creative but still on-topic
     });
 
-    const summary = response.data.choices[0].message.content;
+    const summary = response.data.choices[0].message.content; // choices[0] is the first result
     res.status(200).json({ summary });
   } catch (error) {
     console.error(error);

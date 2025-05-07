@@ -4,9 +4,15 @@ const dotenv = require('dotenv');
 
 dotenv.config(); // Loads the env file
 
+const summarizeRoutes = require('./routes/summarize');
+const diagramRoutes = require('./routes/diagram');
+
 const app = express(); // Create an express app instance
 app.use(cors()); // Enable CORS globally 
 app.use(express.json()); // Middleware to parse incoming JSON in request bodies
+
+app.use('/api/summarize', summarizeRoutes);
+app.use('/api/diagram', diagramRoutes);
 
 app.get('/', (req, res) => res.send('API working!'));
 

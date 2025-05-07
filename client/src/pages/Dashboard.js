@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useState } from 'react';
 
 function Dashboard() {
@@ -6,13 +7,20 @@ function Dashboard() {
     const [summary, setSummary] = useState('');
     const [loading, setLoading] = useState(false);
 
-    const handleSummarize = () => {
+    const handleSummarize = async () => {
         setLoading(true);
         setSummary('');
-        setTimeout(() => {
-            setSummary("Here's your summary!"); //temorary]
+        try {
+            const response = await axios.post('http://localhost:3000/api/summarize', {
+                inputText,
+            });
+            setSummary(response.data.summary);
+        } catch (error) {
+            console.error('Summarization failed:', error);
+            setSummary('Failed to summarize.');
+        } finally {
             setLoading(false);
-        }, 1000);
+        }
     };
 
     return (

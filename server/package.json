@@ -15,5 +15,6 @@
     "express": "^5.1.0",
     "firebase-admin": "^13.3.0",
     "openai": "^4.97.0"
-  }
+  },
+  "type": "module"
 }

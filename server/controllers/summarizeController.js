@@ -1,11 +1,10 @@
-const { Configuration, OpenAIApi } = require('openai');
+import OpenAI from 'openai';
 
-const configuration = new Configuration({
+const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
-const openai = new OpenAIApi(configuration); // Creating instance of OpenAI API, can then make requests
 
-exports.summarizeText = async (req, res) => {
+export const summarizeText = async (req, res) => {
   try {
     const { inputText } = req.body;
 

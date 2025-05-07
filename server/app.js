@@ -1,6 +1,7 @@
-const express = require('express');
-const cors = require('cors');
-const dotenv = require('dotenv');
+import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import summarizeRoutes from './routes/summarize.js';
 
 dotenv.config(); // Loads the env file
 
@@ -11,10 +12,9 @@ app.use(cors()); // Enable CORS globally
 app.use(express.json()); // Middleware to parse incoming JSON in request bodies
 
 // Routes
-const summarizeRoutes = require('./routes/summarize');
 const diagramRoutes = require('./routes/diagram');
 app.use('/api/summarize', summarizeRoutes);
-app.use('/api/diagram', diagramRoutes);
+// app.use('/api/diagram', diagramRoutes);
 
 app.get('/', (req, res) => res.send('API working!'));
 

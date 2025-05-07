@@ -1,7 +1,7 @@
-const express = require('express');
-const router = express.Router();
-const { summarizeText } = require('../controllers/summarizeController');
+import express from 'express';
+import { summarizeText } from '../controllers/summarizeController.js';
 
+const router = express.Router();
 router.post('/', summarizeText);
 
-module.exports = router;
+export default router;

@@ -1,0 +1,30 @@
+# Node modules
+client/node_modules/
+server/node_modules/
+
+# Vite build output
+client/dist/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+client/.env
+server/.env
+firebase/.env
+
+# OS/System files
+.DS_Store
+Thumbs.db
+
+# Firebase emulator/local cache
+firebase/.firebase/
+firebase/firebase-debug.log
+
+# VS Code / Codespaces
+.vscode/
+.history/
+*.code-workspace

@@ -59,7 +59,7 @@ People with learning disabilities, ADHD, or other nerodiverse conditions often f
 
 ## Status
 
-Currently in development – in the planning phases, so choosing my tech stack and core features.
+Currently in the planning phase, so finalizing my tech stack and project setup.
 
 ## Future Directions
 
@@ -79,4 +79,4 @@ Inspired by my own struggles with finding learning solutions that work for me an
 
 ## About the Author
 
-Built by Jazmin Tweedle, a Software Engineer & AI Enthusiast. Jazmin got her start from a coding bootcamp at Northwestern, then worked at her first full-time SWE role at Google through their apprenticeship program.
+Built by Jazmin Tweedle, a Software Engineer & AI Enthusiast. Jazmin got her start from a coding bootcamp at Northwestern, then worked at her first full-time SWE role at Google through their apprenticeship program. She's now looking for a full-time role post-apprenticeship where she can create great user experiences.

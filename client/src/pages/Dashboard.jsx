@@ -24,28 +24,37 @@ function Dashboard() {
     };
 
     return (
-        <div>
-            <h1>What Did I Just Read?</h1>
+        <div className="min-h-screen bg-gray-50 px-4 py-10 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+                <h1 className="text-3xl font-bold text-center mb-8 text-purple-800">
+                    What Did I Just Read?
+                </h1>
 
-            <textarea
-                placeholder="Paste your dense or confusing text here..."
-                value={inputText}
-                onChange={(e) => setInputText(e.target.value)}
-            />
+                <div className="space-y-4">
+                    <textarea
+                        rows="6"
+                        placeholder="Paste your dense or confusing text here..."
+                        className="w-full border border-gray-300 p-4 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 text-gray-800"
+                        value={inputText}
+                        onChange={(e) => setInputText(e.target.value)}
+                    />
 
-            <button
-                onClick={handleSummarize}
-                disabled={loading || !inputText.trim()} // Disables button while loading
-            >
-                {loading ? 'Summarizing...' : 'Summarize'}
-            </button>
-
-            {summary && (
-                <div>
-                    <h2>Summary:</h2>
-                    <p>{summary}</p>
+                    <button
+                        onClick={handleSummarize}
+                        disabled={loading || !inputText.trim()}
+                        className="w-full bg-purple-600 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:bg-purple-700 disabled:bg-gray-400 transition-colors"
+                    >
+                        {loading ? 'Summarizing...' : 'Summarize'}
+                    </button>
                 </div>
-            )}
+
+                {summary && (
+                    <div className="mt-8 bg-white border border-gray-300 p-6 rounded-lg shadow">
+                        <h2 className="text-xl font-semibold text-purple-700 mb-2">Summary:</h2>
+                        <p className="text-gray-800 whitespace-pre-wrap">{summary}</p>
+                    </div>
+                )}
+            </div>
         </div>
     )
 }

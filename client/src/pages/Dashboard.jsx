@@ -11,7 +11,7 @@ function Dashboard() {
         setLoading(true);
         setSummary('');
         try {
-            const response = await axios.post('http://localhost:3000/api/summarize', {
+            const response = await axios.post('https://refactored-pancake-x74gvvj94w9cvvqv-3000.app.github.dev/api/summarize', {
                 inputText,
             });
             setSummary(response.data.summary);

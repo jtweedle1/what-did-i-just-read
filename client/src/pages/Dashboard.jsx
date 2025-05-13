@@ -55,14 +55,14 @@ function Dashboard() {
 
                 {summary && (
                     <div className="mt-8 bg-white border border-gray-300 p-6 rounded-lg shadow">
-                        <h2 className="text-xl font-semibold text-[#333333] mb-2">Summary:</h2>
+                        <h2 className="text-xl font-semibold text-[#333333] mb-2">Summary</h2>
                         <p className="text-[#333333] whitespace-pre-wrap">{summary}</p>
                     </div>
                 )}
 
                 {diagramCode && (
                     <div className="mt-8 bg-white border border-gray-300 p-6 rounded-lg shadow">
-                        <h2 className="text-2xl mb-4">Flowchart/Diagram</h2>
+                        <h2 className="text-xl font-semibold text-[#333333] mb-2">Flowchart/Diagram</h2>
                         <Mermaid chart={diagramCode} />
                     </div>
                 )}

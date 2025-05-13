@@ -31,7 +31,7 @@ People with learning disabilities, ADHD, or other nerodiverse conditions often f
 | **Backend**  | Node.js + Express             | Easy integration with React; popular for web APIs                         |
 | **LLM**      | OpenAI GPT-3.5 (default), GPT-4 (optional) | GPT-3.5 is low-cost, powerful; GPT-4 can be swapped in if needed         |
 | **Visuals**  | Mermaid.js                    | Renders flowcharts in-browser from text-based syntax                      |
-| **TTS**      | Open Source (e.g., pyttsx3 or gTTS, still deciding) | Keeps the stack free and lightweight for prototyping                     |
+| **TTS**      | Web Speech API | Free and runs natively in browser, easy to implement                     |
 | **Auth**     | Firebase Auth                 | Easy user management + optional social login support                      |
 | **Storage**  | Firebase Firestore            | Fast, serverless NoSQL DB for storing sessions per user                  |
 | **Deployment** | Vercel (Frontend) + Render or Railway (Backend) | Simple to set up and scalable for small projects                       |

@@ -59,11 +59,10 @@ People with learning disabilities, ADHD, or other nerodiverse conditions often f
 
 ## Status
 
-Currently in the planning phase, so finalizing my tech stack and project setup.
+Currently developing and out of the planning phase! Have implemented several features already. What's next is either implementing the quiz or the user login/auth.
 
 ## Future Directions
 
-- Add quiz generation for comprehension checks  
 - Let users customize how content is explained (e.g., story, metaphor, step-by-step)  
 - Upload PDFs or slides and summarize sections in bulk  
 - Chrome extension for summarizing web content instantly  

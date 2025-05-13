@@ -19,7 +19,7 @@ People with learning disabilities, ADHD, or other nerodiverse conditions often f
 |------------------------|---------|-----------------------------------------------------------------------------|
 | Casual Summary       | COMPLETE | Uses GPT-3.5 to rewrite text in relaxed, accessible language               |
 | Visual Diagram (Flowchart) | COMPLETE | Converts key ideas into Mermaid.js diagrams                                |
-| Open Source TTS      | Planned | Optional playback of summaries using free browser or Python-based TTS      |
+| TTS      | Complete | Optional playback of summaries using free browser-based TTS      |
 | User Accounts        | Planned | Firebase Auth for email-based login/signup                                 |
 | Session Storage      | Planned | Saves summaries + diagrams per user in Firestore for review later          |
 

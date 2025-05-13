@@ -17,7 +17,7 @@ export const summarizeText = async (req, res) => {
       input: `Rewrite the following in a casual, neurodiverse-friendly way that's easy to understand:\n\n"${inputText}"`
   });
 
-    const summary = response.output[0].content[0].text; // choices[0] is the first result
+    const summary = response.output[0].content[0].text;
     res.status(200).json({ summary });
   } catch (error) {
     console.error(error);

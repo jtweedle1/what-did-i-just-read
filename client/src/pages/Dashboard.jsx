@@ -1,11 +1,13 @@
 import axios from 'axios';
 import { useState } from 'react';
+import Mermaid from '../components/Mermaid';
 
 function Dashboard() {
 
-    const [inputText, setInputText] = useState('');
-    const [summary, setSummary] = useState('');
-    const [loading, setLoading] = useState(false);
+    const [inputText, setInputText] = useState(''); // Overall input text for all generations
+    const [summary, setSummary] = useState(''); // Text summary
+    const [loading, setLoading] = useState(false); // Loading state for feedback
+    const [diagramCode, setDiagramCode] = useState(''); // Flowchart output
 
     const handleSummarize = async () => {
         setLoading(true);
@@ -15,6 +17,7 @@ function Dashboard() {
                 inputText,
             });
             setSummary(response.data.summary);
+            setDiagramCode(`graph TD;\nA[Start] --> B[End]`);
         } catch (error) {
             console.error('Summarization failed:', error);
             setSummary('Failed to summarize.');
@@ -52,6 +55,15 @@ function Dashboard() {
                     <div className="mt-8 bg-white border border-gray-300 p-6 rounded-lg shadow">
                         <h2 className="text-xl font-semibold text-[#333333] mb-2">Summary:</h2>
                         <p className="text-[#333333] whitespace-pre-wrap">{summary}</p>
+                    </div>
+                )}
+
+                {diagramCode && (
+                    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-10">
+                        <div className="max-w-2xl w-full bg-white p-6 rounded shadow">
+                            <h1 className="text-2xl mb-4">Mermaid Diagram Test</h1>
+                            <Mermaid chart={`graph TD;\nA[Start] --> B[End]`} />
+                        </div>
                     </div>
                 )}
             </div>

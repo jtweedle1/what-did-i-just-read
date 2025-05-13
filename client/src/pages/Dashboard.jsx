@@ -57,6 +57,14 @@ function Dashboard() {
                     <div className="mt-8 bg-white border border-gray-300 p-6 rounded-lg shadow">
                         <h2 className="text-xl font-semibold text-[#333333] mb-2">Summary</h2>
                         <p className="text-[#333333] whitespace-pre-wrap">{summary}</p>
+                        <div className="flex justify-center">
+                        <button
+                            onClick={() => speakSummary(summary)}
+                            className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+                        >
+                            🔊 Play Summary
+                        </button>
+                        </div>
                     </div>
                 )}
 
@@ -66,7 +74,7 @@ function Dashboard() {
                         <Mermaid chart={diagramCode} />
                     </div>
                 )}
-        </div>
+            </div>
         </div >
     )
 }

@@ -62,7 +62,7 @@ function Dashboard() {
 
                 {diagramCode && (
                     <div className="mt-8 bg-white border border-gray-300 p-6 rounded-lg shadow">
-                        <h1 className="text-2xl mb-4">Mermaid Diagram Test</h1>
+                        <h2 className="text-2xl mb-4">Flowchart/Diagram</h2>
                         <Mermaid chart={diagramCode} />
                     </div>
                 )}

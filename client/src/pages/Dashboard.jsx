@@ -12,12 +12,14 @@ function Dashboard() {
     const handleSummarize = async () => {
         setLoading(true);
         setSummary('');
+        setDiagramCode('');
+
         try {
             const response = await axios.post('https://refactored-pancake-x74gvvj94w9cvvqv-3000.app.github.dev/api/summarize', {
                 inputText,
             });
             setSummary(response.data.summary);
-            setDiagramCode(`graph TD;\nA[Start] --> B[End]`);
+            setDiagramCode(response.data.diagram);
         } catch (error) {
             console.error('Summarization failed:', error);
             setSummary('Failed to summarize.');
@@ -59,15 +61,13 @@ function Dashboard() {
                 )}
 
                 {diagramCode && (
-                    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-10">
-                        <div className="max-w-2xl w-full bg-white p-6 rounded shadow">
-                            <h1 className="text-2xl mb-4">Mermaid Diagram Test</h1>
-                            <Mermaid chart={`graph TD;\nA[Start] --> B[End]`} />
-                        </div>
+                    <div className="mt-8 bg-white border border-gray-300 p-6 rounded-lg shadow">
+                        <h1 className="text-2xl mb-4">Mermaid Diagram Test</h1>
+                        <Mermaid chart={diagramCode} />
                     </div>
                 )}
-            </div>
         </div>
+        </div >
     )
 }
 export default Dashboard;

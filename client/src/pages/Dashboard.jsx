@@ -2,6 +2,23 @@ import axios from 'axios';
 import { useState } from 'react';
 import Mermaid from '../components/Mermaid';
 
+function speakSummary(text) {
+    if (!window.speechSynthesis) {
+        alert('Sorry, your browser does not support text-to-speech.');
+        return;
+    }
+
+    window.speechSynthesis.cancel();
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US';
+    utterance.rate = 1;     // Normal speed
+    utterance.pitch = 1;    // Normal pitch
+    utterance.volume = 1;   // Full volume
+
+    window.speechSynthesis.speak(utterance);
+}
+
 function Dashboard() {
 
     const [inputText, setInputText] = useState(''); // Overall input text for all generations
@@ -58,12 +75,12 @@ function Dashboard() {
                         <h2 className="text-xl font-semibold text-[#333333] mb-2">Summary</h2>
                         <p className="text-[#333333] whitespace-pre-wrap">{summary}</p>
                         <div className="flex justify-center">
-                        <button
-                            onClick={() => speakSummary(summary)}
-                            className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-                        >
-                            🔊 Play Summary
-                        </button>
+                            <button
+                                onClick={() => speakSummary(summary)}
+                                className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+                            >
+                                🔊 Play Summary
+                            </button>
                         </div>
                     </div>
                 )}

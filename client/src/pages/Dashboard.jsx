@@ -25,11 +25,13 @@ function Dashboard() {
     const [summary, setSummary] = useState(''); // Text summary
     const [loading, setLoading] = useState(false); // Loading state for feedback
     const [diagramCode, setDiagramCode] = useState(''); // Flowchart output
+    const [quiz, setQuiz] = useState('');
 
     const handleSummarize = async () => {
         setLoading(true);
         setSummary('');
         setDiagramCode('');
+        setQuiz('');
 
         try {
             const response = await axios.post('https://refactored-pancake-x74gvvj94w9cvvqv-3000.app.github.dev/api/summarize', {
@@ -37,6 +39,7 @@ function Dashboard() {
             });
             setSummary(response.data.summary);
             setDiagramCode(response.data.diagram);
+            setQuiz(response.data.quiz)
         } catch (error) {
             console.error('Summarization failed:', error);
             setSummary('Failed to summarize.');
@@ -89,6 +92,26 @@ function Dashboard() {
                     <div className="mt-8 bg-white border border-gray-300 p-6 rounded-lg shadow">
                         <h2 className="text-xl font-semibold text-[#333333] mb-2">Flowchart/Diagram</h2>
                         <Mermaid chart={diagramCode} />
+                    </div>
+                )}
+
+                {quiz.length > 0 && (
+                    <div className="mt-8 bg-white border border-gray-300 p-6 rounded-lg shadow">
+                        <h2 className="text-xl font-semibold text-[#333333] mb-2">Quiz</h2>
+                        {quiz.map((q, index) => (
+                            <div key={index} className="mb-4">
+                                <p className="font-medium">{q.question}</p>
+                                {q.options.map((option, idx) => (
+                                    <button
+                                        key={idx}
+                                        onClick={() => alert(option === q.answer ? "✅ Correct!" : "❌ Try Again")}
+                                        className="block w-full text-left border border-gray-300 p-2 rounded-md mt-2 hover:bg-gray-100"
+                                    >
+                                        {option}
+                                    </button>
+                                ))}
+                            </div>
+                        ))}
                     </div>
                 )}
             </div>

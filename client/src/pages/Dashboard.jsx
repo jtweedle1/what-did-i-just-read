@@ -90,9 +90,11 @@ function Dashboard() {
                 )}
 
                 {diagramCode && (
-                    <div className="mt-8 bg-white border border-gray-300 p-6 rounded-lg shadow">
+                    <div className="mt-8 bg-white border border-gray-300 p-6 rounded-lg shadow ">
                         <h2 className="text-xl font-semibold text-[#333333] mb-2">Flowchart/Diagram</h2>
-                        <Mermaid chart={diagramCode} />
+                        <div className="flex justify-center">
+                            <Mermaid chart={diagramCode} />
+                        </div>
                     </div>
                 )}
 

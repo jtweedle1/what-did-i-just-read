@@ -2,7 +2,7 @@
 
 **“What Did I Just Read?”** is a learning assistant designed for diverse learners who struggle with traditional reading. It helps users process dense academic or informational text by instantly transforming it into **casual summaries** and **flowchart-style visualizations** through the power of AI.
 
-This project is designed to be a resume-ready demonstration of modern LLM workflows, multimodal output design, and accessibility-focused UX, with the potential to grow into a fully-featured educational tool.
+This project is designed to be a demonstration of modern LLM workflows, multimodal output design, and accessibility-focused UX, with the potential to grow into a fully-featured educational tool.
 
 ## Problem & Purpose
 
@@ -20,6 +20,7 @@ People with learning disabilities, ADHD, or other nerodiverse conditions often f
 | Casual Summary       | COMPLETE | Uses GPT-3.5 to rewrite text in relaxed, accessible language               |
 | Visual Diagram (Flowchart) | COMPLETE | Converts key ideas into Mermaid.js diagrams                                |
 | TTS      | COMPLETE | Optional playback of summaries using free browser-based TTS      |
+| Quiz        | Planned | Quiz for comprehension checks for what you just read                                 |
 | User Accounts        | Planned | Firebase Auth for email-based login/signup                                 |
 | Session Storage      | Planned | Saves summaries + diagrams per user in Firestore for review later          |
 
@@ -59,11 +60,10 @@ People with learning disabilities, ADHD, or other nerodiverse conditions often f
 
 ## Status
 
-Currently in the planning phase, so finalizing my tech stack and project setup.
+Currently developing and out of the planning phase! Have implemented several features already. What's next is either implementing the quiz or the user login/auth.
 
 ## Future Directions
 
-- Add quiz generation for comprehension checks  
 - Let users customize how content is explained (e.g., story, metaphor, step-by-step)  
 - Upload PDFs or slides and summarize sections in bulk  
 - Chrome extension for summarizing web content instantly  

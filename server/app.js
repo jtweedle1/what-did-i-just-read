@@ -6,7 +6,7 @@ import summarizeRoutes from './routes/summarize.js';
 dotenv.config(); // Loads the env file
 
 const app = express(); // Create an express app instance
-const FRONTEND_ORIGIN = 'https://refactored-pancake-x74gvvj94w9cvvqv-5173.app.github.dev';
+const FRONTEND_ORIGIN = process.env.FRONTEND_URL;
 
 // Middleware
 app.use(cors({

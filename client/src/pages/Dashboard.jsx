@@ -34,7 +34,7 @@ function Dashboard() {
         setQuiz('');
 
         try {
-            const response = await axios.post('https://refactored-pancake-x74gvvj94w9cvvqv-3000.app.github.dev/api/summarize', {
+            const response = await axios.post(process.env.BACKEND + '/api/summarize', {
                 inputText,
             });
             setSummary(response.data.summary);

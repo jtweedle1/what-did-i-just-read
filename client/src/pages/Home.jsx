@@ -1,11 +1,12 @@
 import axios from 'axios';
+import Hero from "../components/Hero"
 
 function Home() {
 
     return (
         <div>
-            <h1>You're Home!</h1>
+            <Hero />
         </div>
-    )
+    );
 }
 export default Home;

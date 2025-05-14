@@ -31,7 +31,7 @@ export const summarizeText = async (req, res) => {
 
     const diagramResponse = await client.responses.create({
       model: "gpt-3.5-turbo",
-      input: `Convert the following content into a Mermaid.js flowchart using graph TD syntax. Only return valid Mermaid code. The flowchart should be presented in a casual, neurodiverse-friendly way that's easy to understand while staying true to the vocabulary used. Do not include any explanation or commentary:\n\n"${inputText}"`
+      input: `Convert the following content into a Mermaid.js flowchart using graph TD syntax. Only return valid Mermaid code. The flowchart should be presented in a casual, neurodiverse-friendly way that's easy to understand while staying true to the vocabulary used. Do not include any explanation or commentary. Do not include any HTML, Markdown, or special characters like <br/>.:\n\n"${inputText}"`
     });
 
     const quizResponse = await client.responses.create({

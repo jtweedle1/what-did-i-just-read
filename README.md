@@ -60,7 +60,7 @@ People with learning disabilities, ADHD, or other nerodiverse conditions often f
 ### Outputs (Thus Far)
 
 #### Summary
-![Image](client/src/assets/summary.png)
+![Summary](https://github.com/jtweedle1/what-did-i-just-read/blob/main/client/src/assets/summary.png?raw=true)
 
 #### Diagram
 ![Diagram](client/src/assets/flowchart.png)

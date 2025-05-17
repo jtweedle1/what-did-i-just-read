@@ -22,7 +22,7 @@ People with learning disabilities, ADHD, or other nerodiverse conditions often f
 | Casual Summary       | COMPLETE | Uses GPT-3.5 to rewrite text in relaxed, accessible language               |
 | Visual Diagram (Flowchart) | COMPLETE | Converts key ideas into Mermaid.js diagrams                                |
 | TTS      | COMPLETE | Optional playback of summaries using free browser-based TTS      |
-| Quiz        | IN PROGRESS | Quiz for comprehension checks for what you just read                                 |
+| Quiz        | COMPLETE | Quiz for comprehension checks for what you just read                                 |
 | User Accounts        | Planned | Firebase Auth for email-based login/signup                                 |
 | Session Storage      | Planned | Saves summaries + diagrams per user in Firestore for review later          |
 
@@ -39,7 +39,7 @@ People with learning disabilities, ADHD, or other nerodiverse conditions often f
 | **Storage**  | Firebase Firestore            | Fast, serverless NoSQL DB for storing sessions per user                  |
 | **Deployment** | Vercel (Frontend) + Render or Railway (Backend) | Simple to set up and scalable for small projects                       |
 
-## Example Flow (Planned)
+## Example Flow
 
 1. User logs in and pastes a dense block of text.
 2. App sends the input to the backend.
@@ -52,17 +52,29 @@ People with learning disabilities, ADHD, or other nerodiverse conditions often f
 
 ## Example Input & Output
 
-**Input:** "In classical conditioning, a neutral stimulus paired with an unconditioned stimulus becomes a conditioned stimulus that elicits a response."
+### Input:
+"Computer programming or coding is the composition of sequences of instructions, called programs, that computers can follow to perform tasks. It involves designing and implementing algorithms, step-by-step specifications of procedures, by writing code in one or more programming languages. Programmers typically use high-level programming languages that are more easily intelligible to humans than machine code, which is directly executed by the central processing unit. Proficient programming usually requires expertise in several different subjects, including knowledge of the application domain, details of programming languages and generic code libraries, specialized algorithms, and formal logic."
 
-**Outputs (Prospective):**
-- **Summary:** When you hear the ice cream truck song and start drooling - yep, that’s conditioning.
-- **Visual Map:** [Neutral Stimulus] + [UCS] → [CS] → [Response]
-- **Audio Clip:** Plays 30 sec version of the summary
-- **Quiz:** What does a neutral stimulus become? → Conditioned Stimulus
+![To Summarize](client/src/assets/tosummarize.png)
+
+### Outputs (Thus Far)
+
+#### Summary
+![Summary](client/src/assets/summary.png)
+
+#### Diagram
+![Diagram](client/src/assets/flowchart.png)
+![Diagram Zoomed](client/src/assets/flowchartzoom.png)
+* To Do: Render the flowchart zoomed in more so it can be visible within the outlined confines.
+
+#### Audio Clip
+Button beneath generated summary allows you to play text-to-speech.
+
+#### Quiz
+![Quiz](client/src/assets/quiz.png)
 
 ## Status
-
-Currently developing and out of the planning phase! Have implemented several features already. What's next is either implementing the quiz or the user login/auth.
+Currently developing and out of the planning phase! Have implemented several features already. What's next is the homepage UI and signup/login features.
 
 ## Future Directions
 

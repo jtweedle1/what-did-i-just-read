@@ -60,12 +60,12 @@ People with learning disabilities, ADHD, or other nerodiverse conditions often f
 ### Outputs (Thus Far)
 
 #### Summary
-![Summary](client/src/assets/summary.png)
+
 
 #### Diagram
 ![Diagram](client/src/assets/flowchart.png)
 ![Diagram Zoomed](client/src/assets/flowchartzoom.png)
-* To Do: Render the flowchart zoomed in more so it can be visible within the outlined confines.
+To Do: Render the flowchart zoomed in more so it can be visible within the outlined confines.
 
 #### Audio Clip
 Button beneath generated summary allows you to play text-to-speech.

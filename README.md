@@ -1,5 +1,7 @@
 # What Did I Just Read? – AI Reader's Learning Assistant
 
+![Header image](client/src/assets/header.png)
+
 **“What Did I Just Read?”** is a learning assistant designed for diverse learners who struggle with traditional reading. It helps users process dense academic or informational text by instantly transforming it into **casual summaries** and **flowchart-style visualizations** through the power of AI.
 
 This project is designed to be a demonstration of modern LLM workflows, multimodal output design, and accessibility-focused UX, with the potential to grow into a fully-featured educational tool.

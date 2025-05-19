@@ -37,7 +37,7 @@ function Mermaid({ chart }) {
   }, [isRendered]);
 
   const handleDownload = () => {
-    const svgElement = ref.current.querySelector('svg');
+    const svgElement = containerRef.current.querySelector('svg');
     if (!svgElement) return;
 
     const svgBlob = new Blob([svgElement.outerHTML], { type: 'image/svg+xml' });

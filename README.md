@@ -41,14 +41,16 @@ People with learning disabilities, ADHD, or other nerodiverse conditions often f
 
 ## Example Flow
 
-1. User logs in and pastes a dense block of text.
+1. User logs in and pastes a dense block of text. (PLANNED)
 2. App sends the input to the backend.
 3. Backend uses GPT-3.5 to:
    - Generate a casual TL;DR summary
    - Extract key relationships for diagram
-4. Mermaid.js renders the diagram in-browser.
-5. Optional: Summary converted to audio and played back.
-6. Session is stored and accessible from the user’s dashboard.
+   - Generate quiz questions
+4. Casual summary is displayed.
+5. Mermaid.js renders the diagram in-browser.
+6. Quiz is generated.
+7. Session is stored and accessible from the user’s dashboard. (PLANNED)
 
 ## Example Input & Output
 

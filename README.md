@@ -32,7 +32,7 @@ People with learning disabilities, ADHD, or other nerodiverse conditions often f
 |--------------|-------------------------------|---------------------------------------------------------------------------|
 | **Frontend** | React + Tailwind CSS          | React offers flexibility; Tailwind enables clean UI with low friction     |
 | **Backend**  | Node.js + Express             | Easy integration with React; popular for web APIs                         |
-| **LLM**      | OpenAI GPT-3.5 (default) | GPT-3.5 is low-cost, powerful; GPT-4 can be swapped in if needed         |
+| **LLM**      | OpenAI GPT-3.5 | GPT-3.5 is low-cost, powerful; GPT-4 can be swapped in if needed         |
 | **Visuals**  | Mermaid.js                    | Renders flowcharts in-browser from text-based syntax                      |
 | **TTS**      | Web Speech API | Free and runs natively in browser, easy to implement                     |
 | **Auth**     | Firebase Auth                 | Easy user management + optional social login support                      |

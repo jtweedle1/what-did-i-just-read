@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import mermaid from 'mermaid';
-import panzoom from '@panzoom/panzoom';
 
 mermaid.initialize({ startOnLoad: false, theme: 'neutral' });
 
@@ -31,7 +30,6 @@ function Mermaid({ chart }) {
         svgElement.style.maxWidth = '100%';
         svgElement.style.height = 'auto';
         svgElement.style.display = 'block';
-        panzoom(svgElement);
       }
     }
   }, [isRendered]);

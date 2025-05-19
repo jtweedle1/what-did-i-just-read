@@ -31,7 +31,16 @@ export const summarizeText = async (req, res) => {
 
     const diagramResponse = await client.responses.create({
       model: "gpt-3.5-turbo",
-      input: `Convert the following content into a Mermaid.js flowchart using graph TD syntax. Only return valid Mermaid code. The flowchart should be presented in a casual, neurodiverse-friendly way that's easy to understand while staying true to the vocabulary used. Do not include any explanation or commentary. Do not include any HTML, Markdown, or special characters like <br/>.:\n\n"${inputText}"`
+      input: `Convert the following text into a clear Mermaid.js flowchart using graph TD syntax.
+
+- It should have a clear, purpose-driven scope: It answers a specific question or explains a specific process. It doesn’t try to cover everything—just the core idea or decision points. Title or introductory text clearly frames the goal (e.g. but not limited to this, "How to Evaluate Code Quality").
+- It should have logical and minimal structure: It presents logical progression—each step flows naturally into the next. It uses as few elements as possible without losing meaning (ideally 3-7 primary steps). Decision points (Yes/No, True/False) are easy to follow without looping back endlessly.
+- It should have concise and readable labels: Boxes use short, action-oriented phrases (e.g., "Check if code runs", not "Consider whether the code is functioning properly"). Avoids over-explaining; additional context can be placed outside the diagram if needed.
+- It should have visually distinct elements: Shapes (e.g., rectangles for actions, diamonds for decisions) follow consistent meaning. Arrows point clearly in one direction without crossing over or looping awkwardly. Adequate spacing makes it easy to distinguish steps at a glance.
+- It should have user-centered design: It should be designed for the intended reader which is a neurodiverse learner. It can optionally add examples or definitions if terms are unfamiliar.
+
+Text:
+"${inputText}"`
     });
 
     const quizResponse = await client.responses.create({

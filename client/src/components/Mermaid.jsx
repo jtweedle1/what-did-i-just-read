@@ -48,19 +48,19 @@ function Mermaid({ chart }) {
   };
 
   return (
-   <>
+    <>
       <div
         style={{ overflow: 'auto', maxHeight: '80vh', border: '1px solid #ccc', width: '100%' }}
         className="bg-white border border-gray-300 rounded-md p-4 mt-4 shadow"
       >
         <div ref={containerRef} style={{ width: '100%' }} />
-              <button
-        onClick={handleDownload}
-        className="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-3 rounded"
-      >
-        Download Diagram
-      </button>
       </div>
+      <button
+          onClick={handleDownload}
+          className="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-3 rounded"
+        >
+          Download Diagram
+        </button>
     </>
   );
 }
